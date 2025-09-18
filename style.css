@@ -1,0 +1,46 @@
+body {
+  /* background: repeating-linear-gradient
+   90deg,  
+    #76944c,
+    #c8daa6 30px,
+    #f5f5ac 30px,
+    #ffffff 30px */
+
+  color: #727257;
+  font-size: 20px;
+  font-family: "Alexandria", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+@media screen and (min-width: 600px) {
+  .product {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product {
+    background-color: 5px solid #f7c873;
+    border: #d1e47f;
+    width: 400px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 4px 4px 10px #000000b7;
+    overflow: hidden;
+    transition: transform 0.3s ease, max-height 0.5s ease;
+    max-height: 300px;
+    cursor: pointer;
+  }
+}
+.post:hover {
+  transform: scale(1.05);
+  max-height: 1000;
+}
