@@ -1,17 +1,38 @@
 body {
-  /* background: repeating-linear-gradient
-   90deg,  
-    #76944c,
-    #c8daa6 30px,
-    #f5f5ac 30px,
-    #ffffff 30px */
-
+  margin: 0;
+  min-height: 100vh;
+  background: repeating-linear-gradient(
+    to right,
+    #76944c 0 30px,
+    #c8daa6 30px 60px,
+    #f5f5ac 60px 90px,
+    #ffffff 90px 120px
+  );
   color: #727257;
   font-size: 20px;
   font-family: "Alexandria", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
+}
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.header {
+  border: 5px solid #d1e47f;
+  background-color: #ffffff;
+  width: 850px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 4px 4px 10px #000000b7;
+  overflow: hidden;
+  transition: transform 0.3s ease, max-height 0.5s ease;
+  max-height: 200px;
+  cursor: pointer;
 }
 
 .product-list {
@@ -19,28 +40,54 @@ body {
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
+  min-height: 1200px;
+  padding-bottom: 50px;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  border: 2px solid #d1e47f;
+  width: 300px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 4px 4px 10px #000000b7;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.product:hover {
+  transform: scale(1.05);
+  box-shadow: 6px 6px 15px #000000b7;
+}
+
+.product__image {
+  transition: transform 0.3s ease;
+}
+
+.product__image:hover {
+  transform: scale(1.1);
+}
+
+.product__details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.5s ease;
+  padding: 0 10px;
+}
+
+.product:hover .product__details {
+  max-height: 150px;
+  padding: 10px;
 }
 
 @media screen and (min-width: 600px) {
   .product {
     flex-direction: column;
     align-items: center;
+    max-height: none;
   }
-
-  .product {
-    background-color: 5px solid #f7c873;
-    border: #d1e47f;
-    width: 400px;
-    padding: 10px;
-    text-align: center;
-    box-shadow: 4px 4px 10px #000000b7;
-    overflow: hidden;
-    transition: transform 0.3s ease, max-height 0.5s ease;
-    max-height: 400px;
-    cursor: pointer;
-  }
-}
-.post:hover {
-  transform: scale(1.05);
-  max-height: 1000;
 }
