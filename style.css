@@ -25,14 +25,16 @@ body {
 .header {
   border: 5px solid #d1e47f;
   background-color: #ffffff;
-  width: 850px;
+  width: fit-content;
+  max-width: none;
   padding: 10px;
   text-align: center;
   box-shadow: 4px 4px 10px #000000b7;
   overflow: hidden;
   transition: transform 0.3s ease, max-height 0.5s ease;
-  max-height: 200px;
   cursor: pointer;
+  white-space: nowrap;
+  margin: 0 auto;
 }
 
 .product-list {
@@ -49,7 +51,7 @@ body {
   flex-direction: column;
   align-items: center;
   background-color: #ffffff;
-  border: 2px solid #d1e47f;
+  border: 5px solid #d1e47f;
   width: 300px;
   padding: 10px;
   text-align: center;
@@ -80,7 +82,7 @@ body {
 }
 
 .product:hover .product__details {
-  max-height: 150px;
+  max-height: 200px;
   padding: 10px;
 }
 
@@ -93,13 +95,25 @@ body {
   font-weight: bold;
   text-align: center;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: transform 0.3s ease;
+  width: 100px;
+  margin-top: 10px;
+  box-shadow: 4px 4px 10px #00000034;
 }
 
-@media screen and (min-width: 600px) {
+.price:hover {
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 900px) {
   .product {
     flex-direction: column;
     align-items: center;
     max-height: none;
+  }
+  .header {
+    width: 90%;
+    white-space: normal;
+    word-wrap: break-word;
   }
 }
