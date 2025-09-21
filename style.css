@@ -84,6 +84,18 @@ body {
   padding: 10px;
 }
 
+.price {
+  display: inline-block;
+  background-color: #fef08a;
+  color: #727257;
+  padding: 8px 16px;
+  border-radius: 12px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
 @media screen and (min-width: 600px) {
   .product {
     flex-direction: column;
