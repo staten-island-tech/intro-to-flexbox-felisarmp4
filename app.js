@@ -23,7 +23,7 @@ if (temp>=212) {
     console.log("frozen");
 } else {
 console.log("water");
-}*/
+}
 
 function enterCastle(hasKey, hasMagic, isBanned){
     if((hasKey === true || hasMagic) || !isBanned) {
@@ -33,4 +33,15 @@ function enterCastle(hasKey, hasMagic, isBanned){
     }
 }
 enterCastle(true, true, true,);
+*/
 
+function whichbowlmiddle(a, b, c) {
+    if ((a > b && a < c) || (a < b && a > c)) return a;
+    if ((b > a && b < c) || (b < a && b > c)) return b;
+    else return c;
+}
+console.log(whichbowlmiddle(10, 5, 8))
+
+function telemarketer(a,b,c,d) {
+     if ()
+}
