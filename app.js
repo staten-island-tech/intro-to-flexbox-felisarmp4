@@ -33,7 +33,7 @@ function enterCastle(hasKey, hasMagic, isBanned){
     }
 }
 enterCastle(true, true, true,);
-*/
+
 
 function whichbowlmiddle(a, b, c) {
     if ((a > b && a < c) || (a < b && a > c)) return a;
@@ -43,5 +43,18 @@ function whichbowlmiddle(a, b, c) {
 console.log(whichbowlmiddle(10, 5, 8))
 
 function telemarketer(a,b,c,d) {
-     if ()
+if(
+     (a === 8 || a === 9)
+     &&
+     (b === c)
+     &&
+     (d === 8 || d === 9)
+)
+    { return "ignore";
+ } else {
+     return "answer";
+ }
 }
+console.log(telemarketer(9,6,6,8)) */
+
+function engORfrench(num, ...lines)
