@@ -55,6 +55,33 @@ if(
      return "answer";
  }
 }
-console.log(telemarketer(9,6,6,8)) */
+console.log(telemarketer(9,6,6,8))  */
 
-function engORfrench(num, ...lines)
+function engORfrench(num, ...sentences){
+    let s = 0;
+    let t = 0;
+    for (let i = 0; i < num; i++) {
+        for(let j =0; j < sentences[i].length; j++){
+            
+
+        if(sentences[i][j] === "S" || sentences[i][j] === "s") {
+            s++;
+        } if(sentences[i][j] === "T" || sentences[i][j] === "t") {
+            t++;
+        }
+        }
+            
+        }
+       
+
+if (s > t) {
+    console.log ("Parles-tu français?")
+} else if (t > s){
+    console.log("probably english")
+} else {
+    console.log("probably french")
+}
+    
+}
+engORfrench(3, "The red cat sat on the mat.", "Why are you so sad cat?", "Don't ask that.");
+
