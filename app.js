@@ -55,7 +55,7 @@ if(
      return "answer";
  }
 }
-console.log(telemarketer(9,6,6,8))  */
+console.log(telemarketer(9,6,6,8))  
 
 function engORfrench(num, ...sentences){
     let s = 0;
@@ -75,7 +75,7 @@ function engORfrench(num, ...sentences){
        
 
 if (s > t) {
-    console.log ("Parles-tu français?")
+    console.log ("probably french")
 } else if (t > s){
     console.log("probably english")
 } else {
@@ -83,5 +83,12 @@ if (s > t) {
 }
     
 }
-engORfrench(3, "The red cat sat on the mat.", "Why are you so sad cat?", "Don't ask that.");
+engORfrench(3, "The red cat sat on the mat.", "Why are you so sad cat?", "Don't ask that."); */
 
+function parkingspace(y,t){
+    for (let i= 0; i < y.length; i++){
+        console.log(y[i], t[i]);
+        if (y[i] === "C" && t[i] === "C")
+    }
+}
+parkingspace("CC..C.CC..")
