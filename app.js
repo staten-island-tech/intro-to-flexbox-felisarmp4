@@ -83,7 +83,7 @@ if (s > t) {
 }
     
 }
-engORfrench(3, "The red cat sat on the mat.", "Why are you so sad cat?", "Don't ask that."); */
+engORfrench(3, "The red cat sat on the mat.", "Why are you so sad cat?", "Don't ask that.");
 
 function parkingspace(y,t){
     for (let i= 0; i < y.length; i++){
@@ -91,4 +91,9 @@ function parkingspace(y,t){
         if (y[i] === "C" && t[i] === "C")
     }
 }
-parkingspace("CC..C.CC..")
+parkingspace("CC..C.CC..") */
+
+function whohaswand (start, num, ...duels){
+    for()
+}
+console.log
