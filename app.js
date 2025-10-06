@@ -91,9 +91,9 @@ function parkingspace(y,t){
         if (y[i] === "C" && t[i] === "C")
     }
 }
-parkingspace("CC..C.CC..") */
+parkingspace("CC..C.CC..")
 
 function whohaswand (start, num, ...duels){
     for()
 }
-console.log
+console.log */
