@@ -29,12 +29,12 @@ products.forEach(product => {
 
  function inject(product) {
   container.insertAdjacentHTML(
-    "afterbegin",
+    "beforeend",
     `<div class="display-card">
       <img class="display-img" src="${product.img}"/>
       <h2 class="display-name">${product.name}</h2>
       <h3 class="display-price">${product.price}</h3>
-      <button class="remove btn">add item</button>
+      <button class="add btn">add item</button>
     </div>`
   );
 }
