@@ -20,21 +20,18 @@ const products = [
     { name: "lemon macarons", price: 19.99, img: "19.png"},
     { name: "lime macarons", price: 19.99, img: "20.png"}
 ];
-const container = document.querySelector('.container');
+const container = document.getElementById('product-list');
 
 
 products.forEach(product => {
-   inject(product);
-})
 
- function inject(product) {
   container.insertAdjacentHTML(
     "beforeend",
     `<div class="display-card">
-      <img class="display-img" src="${product.img}"/>
+      <img class="display-img" src="${product.img}" alt="${product.name}">
       <h2 class="display-name">${product.name}</h2>
-      <h3 class="display-price">${product.price}</h3>
-      <button class="add btn">add item</button>
+      <h3 class="price">$${product.price.toFixed(2)}</h3>
+      <button class="add-btn">add item</button>
     </div>`
   );
-}
+});
