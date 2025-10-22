@@ -7,16 +7,16 @@ const products = [
     { name: "crate of limes", price: 44.99, img: "6.png", type: "fresh fruit"},
     { name: "lemon meringue pie", price: 4.99, img: "7.png", type: "baked goods"},
     { name: "key lime pie", price: 4.99, img: "8.png", type: "baked goods"},
-    { name: "lemonade", price: 3.99, img: "9.png"},
-    { name: "limeade", price: 3.99, img: "10.png"},
+    { name: "lemonade", price: 3.99, img: "9.png", type: "drinks"},
+    { name: "limeade", price: 3.99, img: "10.png", type: "drinks"},
     { name: "lemon pound cake", price: 14.99, img: "11.png", type: "baked goods"},
     { name: "key lime pound cake", price: 14.99, img: "12.png", type: "baked goods"},
-    { name: "outshine lemon fruit bars", price: 5.99, img: "13.png"},
-    { name: "outshine lime fruit bars", price: 5.99, img: "14.png"},
-    { name: "lemon drops", price: 1.99, img: "15.png"},
-    { name: "lime drops", price: 1.99, img: "16.png"},
-    { name: "lemon drop jello shots", price: 3.99, img: "17.png"},
-    { name: "lime drop jello shots", price: 3.99, img: "18.png"},
+    { name: "outshine lemon fruit bars", price: 5.99, img: "13.png", type: "sweets and snacks"},
+    { name: "outshine lime fruit bars", price: 5.99, img: "14.png", type: "sweets and snacks"},
+    { name: "lemon drops", price: 1.99, img: "15.png", type: "sweets and snacks"},
+    { name: "lime drops", price: 1.99, img: "16.png", type: "sweets and snacks"},
+    { name: "lemon drop jello shots", price: 3.99, img: "17.png", type: "sweets and snacks"},
+    { name: "lime drop jello shots", price: 3.99, img: "18.png", type: "sweets and snacks"},
     { name: "lemon macarons", price: 19.99, img: "19.png", type: "baked goods"},
     { name: "lime macarons", price: 19.99, img: "20.png", type: "baked goods"}
 ];
@@ -36,4 +36,3 @@ products.forEach(product => {
   );
 });
 
-function filterby

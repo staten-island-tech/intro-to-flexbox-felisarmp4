@@ -39,6 +39,13 @@ body {
   margin-bottom: 30px;
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
 .display-card {
   display: flex;
   flex-direction: column;
@@ -96,6 +103,22 @@ body {
   transform: scale(1.05);
 }
 
+.filterbtn {
+  display: inline-block;
+  background-color: #fef08a;
+  color: #727257;
+  padding: 8px 16px;
+  border: none;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  width: 150px;
+  margin-top: 10px;
+  box-shadow: 4px 4px 10px #00000034;
+  padding: 5px;
+}
+
 @media screen and (max-width: 900px) {
   .display-card {
     flex-direction: column;
@@ -107,11 +130,4 @@ body {
     white-space: normal;
     word-wrap: break-word;
   }
-}
-
-.container {
-  display: flex;
-  justify-content: center;
-  margin: auto;
-  flex-wrap: wrap;
 }
