@@ -60,6 +60,7 @@ body {
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 .display-card:hover {
@@ -97,10 +98,18 @@ body {
   margin-top: 10px;
   box-shadow: 4px 4px 10px #00000034;
   padding: 5px;
+  border-radius: 5px;
 }
 
 .add-btn:hover {
   transform: scale(1.05);
+}
+
+.filterbtns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .filterbtn {
@@ -114,9 +123,14 @@ body {
   cursor: pointer;
   transition: transform 0.3s ease;
   width: 150px;
-  margin-top: 10px;
+  margin: 5px;
   box-shadow: 4px 4px 10px #00000034;
   padding: 5px;
+  border-radius: 5px;
+}
+
+.filterbtn:hover {
+  transform: scale(1.05);
 }
 
 @media screen and (max-width: 900px) {
