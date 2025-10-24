@@ -1,6 +1,16 @@
 const products = [
-  { name: "full lemon", price: 0.99, img: "1.png", type: "fresh fruit" },
-  { name: "full lime", price: 0.99, img: "2.png", type: "fresh fruit" },
+  {
+    name: "full lemon",
+    price: 0.99,
+    img: "1.png",
+    type: "fresh fruit",
+  },
+  {
+    name: "full lime",
+    price: 0.99,
+    img: "2.png",
+    type: "fresh fruit",
+  },
   {
     name: "full lemon and a slice",
     price: 1.39,
@@ -13,17 +23,42 @@ const products = [
     img: "4.png",
     type: "fresh fruit",
   },
-  { name: "crate of lemons", price: 44.99, img: "5.png", type: "fresh fruit" },
-  { name: "crate of limes", price: 44.99, img: "6.png", type: "fresh fruit" },
+  {
+    name: "crate of lemons",
+    price: 44.99,
+    img: "5.png",
+    type: "fresh fruit",
+  },
+  {
+    name: "crate of limes",
+    price: 44.99,
+    img: "6.png",
+    type: "fresh fruit",
+  },
   {
     name: "lemon meringue pie",
     price: 4.99,
     img: "7.png",
     type: "baked goods",
   },
-  { name: "key lime pie", price: 4.99, img: "8.png", type: "baked goods" },
-  { name: "lemonade", price: 3.99, img: "9.png", type: "drinks" },
-  { name: "limeade", price: 3.99, img: "10.png", type: "drinks" },
+  {
+    name: "key lime pie",
+    price: 4.99,
+    img: "8.png",
+    type: "baked goods",
+  },
+  {
+    name: "lemonade",
+    price: 3.99,
+    img: "9.png",
+    type: "drinks",
+  },
+  {
+    name: "limeade",
+    price: 3.99,
+    img: "10.png",
+    type: "drinks",
+  },
   {
     name: "lemon pound cake",
     price: 14.99,
@@ -54,7 +89,12 @@ const products = [
     img: "15.png",
     type: "sweets and snacks",
   },
-  { name: "lime drops", price: 1.99, img: "16.png", type: "sweets and snacks" },
+  {
+    name: "lime drops",
+    price: 1.99,
+    img: "16.png",
+    type: "sweets and snacks",
+  },
   {
     name: "lemon drop jello shots",
     price: 3.99,
@@ -67,8 +107,18 @@ const products = [
     img: "18.png",
     type: "sweets and snacks",
   },
-  { name: "lemon macarons", price: 19.99, img: "19.png", type: "baked goods" },
-  { name: "lime macarons", price: 19.99, img: "20.png", type: "baked goods" },
+  {
+    name: "lemon macarons",
+    price: 19.99,
+    img: "19.png",
+    type: "baked goods",
+  },
+  {
+    name: "lime macarons",
+    price: 19.99,
+    img: "20.png",
+    type: "baked goods",
+  },
 ];
 const container = document.getElementById("product-list");
 
