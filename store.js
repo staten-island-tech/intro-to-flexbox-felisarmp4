@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", function () {
     products.forEach((product) => {
       if (filterType === "all" || product.type === filterType) {
         container.innerHTML += `
-          <div class="display-card">
+          <div class="display-card" data-name=${product.name}>
             <img class="display-img" src="${product.img}" alt="${product.name}">
             <h2 class="display-name">${product.name}</h2>
             <h3 class="price">$${product.price}</h3>
@@ -153,3 +153,10 @@ document.addEventListener("DOMContentLoaded", function () {
   baked.addEventListener("click", () => showProducts("baked goods"));
   snack.addEventListener("click", () => showProducts("sweets and snacks"));
 });
+
+document.querySelectorAll(".add-btn").forEach((button) => {
+  button.addEventListener("click", (event) =>{
+    const 
+  })
+}
+)
