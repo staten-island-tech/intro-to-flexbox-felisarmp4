@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   let container = document.querySelector("#product-list");
-
+  let cart = [];
   let all = document.querySelector(".filterbtn-all");
   let fruit = document.querySelector(".filterbtn-fruit");
   let drink = document.querySelector(".filterbtn-drink");
@@ -129,15 +129,15 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   ];
 
-  function showProducts(filterType) {
+  function showProducts(filtertype) {
     container.innerHTML = "";
     products.forEach((product) => {
-      if (filterType === "all" || product.type === filterType) {
+      if (filtertype === "all" || product.type === filtertype) {
         container.innerHTML += `
-          <div class="display-card" data-name=${product.name}>
+          <div class="display-card" display-name="${product.name}">
             <img class="display-img" src="${product.img}" alt="${product.name}">
             <h2 class="display-name">${product.name}</h2>
-            <h3 class="price">$${product.price}</h3>
+            <h3 class="display-price">$${product.price}</h3>
             <button class="add-btn">add item</button>
           </div>
         `;
@@ -152,11 +152,14 @@ document.addEventListener("DOMContentLoaded", function () {
   drink.addEventListener("click", () => showProducts("drinks"));
   baked.addEventListener("click", () => showProducts("baked goods"));
   snack.addEventListener("click", () => showProducts("sweets and snacks"));
-});
 
-document.querySelectorAll(".add-btn").forEach((button) => {
-  button.addEventListener("click", (event) =>{
-    const 
-  })
-}
-)
+  document.querySelectorAll(".add-btn").forEach((button) => {
+    button.addEventListener("click", (event) => {
+      const addproduct = event.target
+        .closest(".display-card")
+        .getAttribute("display-name", "disiplay-img", "display-price");
+      /*const productobj = products.find((item) => item.name === addproduct);
+      cart.push(productobj);*/
+    });
+  });
+});
