@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
   let container = document.querySelector("#product-list");
-  let cart = [];
   let all = document.querySelector(".filterbtn-all");
   let fruit = document.querySelector(".filterbtn-fruit");
   let drink = document.querySelector(".filterbtn-drink");
   let baked = document.querySelector(".filterbtn-baked");
   let snack = document.querySelector(".filterbtn-snack");
+  let cart = [];
   const products = [
     {
       name: "full lemon",
@@ -158,8 +158,12 @@ document.addEventListener("DOMContentLoaded", function () {
       const addproduct = event.target
         .closest(".display-card")
         .getAttribute("display-name", "disiplay-img", "display-price");
-      /*const productobj = products.find((item) => item.name === addproduct);
-      cart.push(productobj);*/
+      console.log(
+        event.target.closest(".display-card").getAttribute("display-name")
+      );
+      const productobj = products.find((item) => item.name === addproduct);
+      cart.push(productobj);
+      console.log(cart);
     });
   });
 });
