@@ -142,6 +142,7 @@ function showProducts(filtertype) {
         `;
     }
   });
+  addtocart();
 }
 
 showProducts("all");
@@ -152,16 +153,19 @@ drink.addEventListener("click", () => showProducts("drinks"));
 baked.addEventListener("click", () => showProducts("baked goods"));
 snack.addEventListener("click", () => showProducts("sweets and snacks"));
 
-document.querySelectorAll(".add-btn").forEach((button) => {
-  button.addEventListener("click", (event) => {
-    const addproduct = event.target
-      .closest(".display-card")
-      .getAttribute("display-name", "disiplay-img", "display-price");
-    const productobj = products.find((item) => item.name === addproduct);
-    cart.push(productobj);
-    console.log(cart);
+function addtocart() {
+  document.querySelectorAll(".add-btn").forEach((button) => {
+    button.addEventListener("click", (event) => {
+      const addproduct = event.target
+        .closest(".display-card")
+        .getAttribute("display-name", "disiplay-img", "display-price");
+      const productobj = products.find((item) => item.name === addproduct);
+      cart.push(productobj);
+      console.log(cart);
+    });
   });
-});
+}
+
 const cartbtn = document.querySelector(".cartbtn");
 cartbtn.addEventListener("click", showcart);
 
@@ -177,3 +181,5 @@ function showcart() {
         `;
   });
 }
+
+function price() {}
