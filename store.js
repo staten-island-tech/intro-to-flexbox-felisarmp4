@@ -5,6 +5,7 @@ let drink = document.querySelector(".filterbtn-drink");
 let baked = document.querySelector(".filterbtn-baked");
 let snack = document.querySelector(".filterbtn-snack");
 let cart = [];
+let total = 0;
 const products = [
   {
     name: "full lemon",
@@ -158,7 +159,7 @@ function addtocart() {
     button.addEventListener("click", (event) => {
       const addproduct = event.target
         .closest(".display-card")
-        .getAttribute("display-name", "disiplay-img", "display-price");
+        .getAttribute("display-name");
       const productobj = products.find((item) => item.name === addproduct);
       cart.push(productobj);
       console.log(cart);
@@ -171,15 +172,27 @@ cartbtn.addEventListener("click", showcart);
 
 function showcart() {
   container.innerHTML = "";
+
   cart.forEach((product) => {
     container.innerHTML += `
-          <div class="display-card" display-name="${product.name}">
-            <img class="display-img" src="${product.img}" alt="${product.name}">
-            <h2 class="display-name">${product.name}</h2>
-            <h3 class="display-price">$${product.price}</h3>
-          </div>
-        `;
+      <div class="display-card" display-name="${product.name}">
+        <img class="display-img" src="${product.img}" alt="${product.name}">
+        <h2 class="display-name">${product.name}</h2>
+        <h3 class="display-price">$${product.price}</h3>
+      </div>
+    `;
   });
-}
 
-function price() {}
+  container.innerHTML += `
+    <p>total: <span class="total-display">$0.00</span></p>
+  `;
+
+  price();
+}
+function price() {
+  total = 0;
+  cart.forEach((item) => {
+    total += item.price;
+  });
+  document.querySelector(".total-display").textContent = `$${total}`;
+}

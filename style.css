@@ -161,6 +161,22 @@ body {
   transform: scale(1.05);
 }
 
+.total-display {
+  justify-self: center;
+  display: inline-block;
+  background-color: #fef08a;
+  color: #727257;
+  padding: 8px 16px;
+  border: none;
+  font-weight: bold;
+  text-align: center;
+  width: 50px;
+  margin: 5px;
+  box-shadow: 4px 4px 10px #00000034;
+  padding: 5px;
+  border-radius: 5px;
+}
+
 @media screen and (max-width: 900px) {
   .display-card {
     flex-direction: column;
