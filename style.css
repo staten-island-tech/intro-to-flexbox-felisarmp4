@@ -161,8 +161,33 @@ body {
   transform: scale(1.05);
 }
 
+.total-display-div {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  position: relative;
+  height: auto;
+}
+
+/* box behind both total + price */
+.total-display-div::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  padding: 20px 10px; /* ↑ a little taller, ↓ less wide */
+  background-color: #ffffff;
+  border: 5px solid #d1e47f;
+  border-radius: 5px;
+  box-shadow: 4px 4px 10px #00000034;
+  z-index: -1;
+  transform: scaleX(0.3); /* makes it narrower horizontally */
+}
+
 .total-display {
-  display: d
   background-color: #fef08a;
   color: #727257;
   padding: 8px 16px;

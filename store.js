@@ -184,15 +184,18 @@ function showcart() {
   });
 
   container.innerHTML += `
-    <p>total: <span class="total-display">$0.00</span></p>
+    <div class="total-display-div">
+    <div>total: <span class="total-display">$0.00</span></div>
+    </div>
   `;
 
   price();
 }
+
 function price() {
   total = 0;
   cart.forEach((item) => {
     total += item.price;
   });
-  document.querySelector(".total-display").textContent = `$${total}`;
+  document.querySelector(".total-display").textContent = `$${total.toFixed(2)}`;
 }
