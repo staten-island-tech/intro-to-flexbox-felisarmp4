@@ -133,14 +133,17 @@ function showProducts(filtertype) {
   container.innerHTML = "";
   products.forEach((product) => {
     if (filtertype === "all" || product.type === filtertype) {
-      container.innerHTML += `
+      container.insertAdjacentHTML(
+        "beforeend",
+        `
           <div class="display-card" display-name="${product.name}">
             <img class="display-img" src="${product.img}" alt="${product.name}">
             <h2 class="display-name">${product.name}</h2>
             <h3 class="display-price">$${product.price}</h3>
             <button class="add-btn">add item</button>
           </div>
-        `;
+        `
+      );
     }
   });
   addtocart();
@@ -174,20 +177,26 @@ function showcart() {
   container.innerHTML = "";
 
   cart.forEach((product) => {
-    container.innerHTML += `
+    container.insertAdjacentHTML(
+      "beforeend",
+      `
       <div class="display-card" display-name="${product.name}">
         <img class="display-img" src="${product.img}" alt="${product.name}">
         <h2 class="display-name">${product.name}</h2>
         <h3 class="display-price">$${product.price}</h3>
       </div>
-    `;
+    `
+    );
   });
 
-  container.innerHTML += `
+  container.insertAdjacentHTML(
+    "beforeend",
+    `
     <div class="total-display-div">
     <div>total: <span class="total-display">$0.00</span></div>
     </div>
-  `;
+  `
+  );
 
   price();
 }
