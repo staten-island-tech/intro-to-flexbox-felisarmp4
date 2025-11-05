@@ -172,19 +172,18 @@ body {
   height: auto;
 }
 
-/* box behind both total + price */
 .total-display-div::before {
   content: "";
   position: absolute;
   inset: 0;
   margin: auto;
-  padding: 20px 10px; /* ↑ a little taller, ↓ less wide */
+  padding: 20px 10px;
   background-color: #ffffff;
   border: 5px solid #d1e47f;
   border-radius: 5px;
   box-shadow: 4px 4px 10px #00000034;
   z-index: -1;
-  transform: scaleX(0.3); /* makes it narrower horizontally */
+  transform: scaleX(0.3);
 }
 
 .total-display {
