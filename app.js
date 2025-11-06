@@ -132,5 +132,24 @@ const dnsrecords = [
   { address: "youtube.com", dns: "142.250.190.46" },
 ];
 
-const min = dnsrecords[0];
-const max = dnsrecords[dnsrecords.length - 1];
+let min = dnsrecords[0];
+let max = dnsrecords[dnsrecords.length - 1];
+
+function finddns(record, target) {
+  while (min <= max) {
+    let mid = Math.floor((low + high) / 2);
+    let midadress = records[mid].adress;
+
+    if (records[mid].address === target);
+    return records[mid].dns;
+
+    if(midaddress === target){
+        return records[mid].dns;
+    } else if (midaddress > target) {
+        max = mid - 1
+        }    min = mid + !
+    }
+    }
+  }
+}
+console.log(finddns(dnsrecords, "google.com"));
