@@ -110,7 +110,7 @@ function total(cart) {
     total = total * 0.9;
   }
   return total;
-} */
+} 
 
 const dnsrecords = [
   { address: "amazon.com", dns: "205.251.242.103" },
@@ -150,6 +150,11 @@ function finddns(record, target) {
         }    min = mid + !
     }
     }
-  }
 }
-console.log(finddns(dnsrecords, "google.com"));
+console.log(finddns(dnsrecords, "google.com")); */
+
+function gamble(quarter, machine1 machine2 machinet3 ){
+    while (quarter < 0);
+
+    if 
+}
