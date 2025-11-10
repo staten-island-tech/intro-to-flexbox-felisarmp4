@@ -153,8 +153,44 @@ function finddns(record, target) {
 }
 console.log(finddns(dnsrecords, "google.com")); */
 
-function gamble(quarter, machine1 machine2 machinet3 ){
-    while (quarter < 0);
+function marthaplays(quarters, m1, m2, m3) {
+  let m1count = m1;
+  let m2count = m2;
+  let m3count = m3;
 
-    if 
+  let plays = 0;
+  let turn = 1;
+
+  while (quarters > 0) {
+    quarters--;
+    plays++;
+
+    if (turn === 1) {
+      m1count++;
+      if (m1count === 35) {
+        quarters += 30;
+        m1count = 0;
+      }
+      turn = 2;
+    } else if (turn === 2) {
+      m2count++;
+      if (m2count === 100) {
+        quarters += 60;
+        m2count = 0;
+      }
+      turn = 3;
+    } else {
+      m3count++;
+      if (m3count === 10) {
+        quarters += 9;
+        m3count = 0;
+      }
+      turn = 1;
+    }
+  }
+
+  console.log(`martha played ${plays} times before she went broke`);
+  return plays;
 }
+
+console.log(marthaplays(48, 3, 10, 4));
